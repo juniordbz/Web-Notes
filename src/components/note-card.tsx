@@ -14,7 +14,7 @@ export function NoteCard({ note }: NoteCardProps) {
   return (
     <Dialog.Root>
       <Dialog.Trigger className="flex flex-col rounded-md text-left bg-slate-800 p-5 gap-3 overflow-hidden relative hover:ring-2 hover: ring-slate-600 focus-visible:ring-2 focus-visible:ring-lime-400 outline-none">
-        <span className="font-medium text-slate-300 text-sm">
+        <span className="font-medium text-slate-300 text-sm first-letter:uppercase">
           {formatDistanceToNow(note.createdDate, {
             locale: ptBR,
             addSuffix: true,
@@ -31,7 +31,7 @@ export function NoteCard({ note }: NoteCardProps) {
           </Dialog.Close>
 
           <div className="flex flex-1 flex-col gap-3 p-5">
-            <span className="font-medium text-slate-300 text-sm">
+            <span className="font-medium text-slate-300 text-sm first-letter:uppercase">
               {formatDistanceToNow(note.createdDate, {
                 locale: ptBR,
                 addSuffix: true,
