@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+# Web-Notes em React com Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O projeto Web-Notes é uma aplicação de notas online desenvolvida em React e estilizada com Tailwind CSS. Ele oferece uma maneira intuitiva e eficiente de criar e gerenciar anotações, combinando métodos de entrada por voz e digitação para maior versatilidade.
 
-Currently, two official plugins are available:
+## Principais Características:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Entrada por Voz com Speech Recognition:** Utiliza a API de reconhecimento de voz para permitir aos usuários criar anotações por meio de comandos de voz, oferecendo uma experiência hands-free conveniente e acessível.
+- **Método Tradicional de Digitação:** Além da entrada por voz, os usuários também têm a opção de adicionar anotações através do método tradicional de digitação, garantindo flexibilidade no processo de criação.
+- **Funcionalidades de Busca e Exclusão:** Permite aos usuários buscar anotações por palavras-chave e deletar notas conforme necessário, facilitando a organização e gerenciamento do conteúdo.
+- **Responsivo:** O layout da aplicação foi projetado com responsividade em mente, garantindo uma experiência consistente em uma variedade de dispositivos e tamanhos de tela.
+- **Estilização com Tailwind CSS:** Utiliza o Tailwind CSS para uma estilização eficiente e altamente personalizável, permitindo uma interface limpa e moderna.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- Tailwind CSS
+- API de Speech Recognition
 
-- Configure the top-level `parserOptions` property like this:
+## Como Executar o Projeto:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clone o repositório.
+2. Instale as dependências utilizando o gerenciador de pacotes de sua escolha.
+3. Execute o projeto localmente.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+O projeto Web-Notes oferece uma solução completa e flexível para a criação e organização de anotações online. Combinando métodos de entrada por voz e digitação, juntamente com recursos de busca e exclusão, ele se destaca como uma ferramenta versátil e objetiva para gerenciamento de informações pessoais.
