@@ -76,10 +76,6 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
       setContent(transcription)
     }
 
-    speechRecognition.onerror = (event) => {
-      console.log(event)
-    }
-
     speechRecognition.start()
   }
 
@@ -88,6 +84,8 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
 
     if (speechRecognition !== null) {
       speechRecognition.stop()
+    }
+    if (content === '') {
       setShouldShowOnboarding(true)
     }
   }
