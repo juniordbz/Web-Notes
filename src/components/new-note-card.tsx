@@ -16,6 +16,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
 
   function handleStartEditor() {
     setShouldShowOnboarding(false)
+    setContent('')
   }
 
   function handleContentChange(e: ChangeEvent<HTMLTextAreaElement>) {
@@ -28,6 +29,8 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
 
   function handleModalChange(e: MouseEvent<HTMLButtonElement>) {
     e && setShouldShowOnboarding(true)
+    handleStopRecording()
+    setContent('')
   }
 
   function handleSaveNote(e: FormEvent) {
@@ -51,7 +54,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
     if (!isSpeechRecognitionAPIAvailable) {
       alert('Infelizmente seu navegador não suporta a API de gravação!')
     }
-
+    setContent('')
     setIsRecording(true)
     setShouldShowOnboarding(false)
 
@@ -79,11 +82,13 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
 
     speechRecognition.start()
   }
+
   function handleStopRecording() {
     setIsRecording(false)
 
     if (speechRecognition !== null) {
       speechRecognition.stop()
+      setShouldShowOnboarding(true)
     }
   }
 
